@@ -1,0 +1,19 @@
+print("***Temperature Conversion System***")
+Temp_Farenheit, Temp_Celsius, Temp_Kelvin=0.0,0.0,0.0
+while(True):
+    choice=int(input("Convert Temperature Into:- 1. Farenheit to Celsius 2. Celsius to Farenheit 3. Kelvin to Farenheit 4.Exit"))
+    if(choice==1):
+        Temp_Farenheit=float(input("Temperature in Farenheit ="))
+        Farenheit_to_Celsius=(Temp_Farenheit-32)*5/9
+        print("Temperature in Celsius ="+str(Farenheit_to_Celsius)+"C")
+    elif(choice==2):
+        Temp_Celsius=float(input("Temperature in Celsius ="))
+        Celsius_to_Farenheit=(Temp_Celsius*9/5)+32
+        print("Temperature in Farenheit =",str(Celsius_to_Farenheit)+"F")
+    elif(choice==3):
+        Temp_Kelvin=float(input("Temperature in Kelvin ="))
+        Kelvin_to_Farenheit=(Temp_Kelvin-273.15)*9/5+32
+        print("Temperature in Farenheit =",str(Kelvin_to_Farenheit)+"K")
+    else:
+        print("Exit")
+        break
