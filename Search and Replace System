@@ -1,0 +1,30 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Dec  3 12:02:10 2017
+
+@author: PriyaChandapillai
+"""
+print("***Search & Replace System")
+recent_search=[]
+recent_replace=[]
+paragraph=input("Enter paragraph")
+while(True):
+    choice=int(input("What do you want to do? 1. Search 2. Replace 3. Recent Search 4.Recent Replace 5. Exit"))
+    if(choice==1):
+        search_word=input("Enter word to be searched")
+        print("Your"+search_word+"is present at "+str(paragraph.find(search_word))+"position")
+        recent_search.append(search_word)
+    elif(choice==2):
+        old_word=input("Enter word to be replaced")
+        new_word=input("Enter word to be replaced with ")
+        paragraph=paragraph.replace(old_word,new_word)
+        print("Your new paragraph is ",paragraph)
+        recent_replace.append(old_word)
+    elif(choice==3):
+        print(recent_search[::-1])
+    elif(choice==4):
+        print(recent_replace[::-1])
+    else:
+        break
+    
